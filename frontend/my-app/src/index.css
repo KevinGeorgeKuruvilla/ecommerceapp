@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Using Poppins as the main font which is similar to the reference */
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom color variables */
+:root {
+  --primary-yellow: #ffb800;
+  --dark-bg: #2d2d2d;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --gray-light: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#FFB800] text-[#2D2D2D] font-bold py-4 px-8 rounded-sm text-sm uppercase tracking-wider hover:bg-[#ffa600] transition-colors;
+  }
+
+  .nav-link {
+    @apply text-white hover:text-[#FFB800] transition-colors font-medium text-sm uppercase tracking-wide py-2;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-[#2D2D2D] mb-6;
+  }
+
+  .text-content {
+    @apply text-[#666666] leading-relaxed text-base;
+  }
+
+  .social-icon {
+    @apply text-[#666666] hover:text-[#FFB800] transition-colors p-2;
+  }
+}
+
+/* Top bar styling */
+.top-bar {
+  @apply bg-[#F5F5F5];
+  height: 45px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.top-bar-content {
+  @apply flex justify-between items-center;
+  height: 100%;
+}
+
+.welcome-text {
+  @apply text-[#666666];
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.social-icons {
+  @apply flex items-center;
+  gap: 20px;
+}
+
+.social-icon {
+  @apply text-[#666666] transition-colors;
+  font-size: 14px;
+}
+
+.social-icon:hover {
+  @apply text-[#FFB800];
+}
+
+/* Main Navigation styling */
+.main-nav {
+  @apply bg-[#2D2D2D];
+  height: 80px;
+}
+
+.nav-container {
+  @apply flex items-center justify-between;
+  height: 100%;
+}
+
+.nav-brand {
+  @apply text-white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  @apply flex items-center;
+  gap: 42px;
+}
+
+.nav-link {
+  @apply text-white transition-colors;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+}
+
+.nav-link:hover {
+  @apply text-[#FFB800];
+}
+
+.nav-icons {
+  @apply flex items-center;
+  gap: 32px;
+}
+
+.nav-icon {
+  @apply text-white transition-colors;
+}
+
+.nav-icon:hover {
+  @apply text-[#FFB800];
+}
+
+/* Cart counter styling */
+.cart-counter {
+  @apply bg-[#FFB800] text-[#2D2D2D] font-semibold;
+  font-size: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+/* Hero section styling */
+.hero-section {
+  @apply relative h-[600px] bg-[#2D2D2D];
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-[url('/src/assets/tech-background.jpg')] bg-cover bg-center opacity-50;
+}
+
+.hero-container {
+  @apply container mx-auto h-full relative flex items-center;
+}
+
+.hero-content {
+  @apply bg-white bg-opacity-95 p-12 rounded-sm shadow-xl max-w-xl;
+}
+
+.hero-title {
+  @apply text-4xl font-bold text-[#2D2D2D] mb-3;
+}
+
+.hero-subtitle {
+  @apply text-[56px] font-bold text-[#2D2D2D] mb-6 leading-tight;
+}
+
+.hero-text {
+  @apply text-[#666666] leading-relaxed text-base mb-10;
+}
