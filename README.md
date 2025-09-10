@@ -1,4 +1,5 @@
 E-Commerce Application
+
 A full-stack e-commerce application with a modern React + Vite + TailwindCSS frontend and a Node.js + Express + MongoDB backend.
 Includes role-based authentication for Admins and Users, with complete admin privileges for managing products.
 
